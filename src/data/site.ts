@@ -187,6 +187,95 @@ export const locations = [
   { city: "Brookfield", region: "South County", phone: "(555) 010-2455" },
 ];
 
+export type NavItem = { label: string; to: string };
+export type NavMenu = { label: string; to: string; items?: NavItem[] };
+
+// Navigation modeled on comforcare.com. Items without a real page in this app
+// resolve to a shared placeholder route (see App.tsx / StubPage).
+//
+// `navMenus` is the primary service navigation. `utilityMenus` sits in a slim
+// bar above it for lower-traffic, company-level links.
+export const navMenus: NavMenu[] = [
+  {
+    label: "In-Home Care Services",
+    to: "/services",
+    items: [
+      { label: "24-Hour Care Service", to: "/in-home-care/24-hour-care-service" },
+      { label: "Dementia Care", to: "/dementia-care" },
+      { label: "Disability Management", to: "/in-home-care/disability-management" },
+      { label: "Light Housekeeping", to: "/in-home-care/light-housekeeping" },
+      { label: "Long-Term Care Insurance", to: "/in-home-care/long-term-care-insurance" },
+      { label: "Patient-Centered Care", to: "/in-home-care/patient-centered-care" },
+      { label: "Personal In-Home Care", to: "/in-home-care/personal-in-home-care" },
+      { label: "Private Duty Nursing", to: "/in-home-care/private-duty-nursing" },
+      { label: "Respite and Short-Term Care", to: "/in-home-care/respite-and-short-term-care" },
+      { label: "Supporting a Recent Hospitalization", to: "/in-home-care/transitions-of-care" },
+      { label: "Senior and Elder Care Management", to: "/in-home-care/senior-and-elder-care-management" },
+      { label: "In-Home Care for Veterans", to: "/in-home-care/in-home-care-for-veterans" },
+    ],
+  },
+  {
+    label: "Dementia Care",
+    to: "/dementia-care",
+    items: [
+      { label: "Alzheimer's Care", to: "/alzheimers-care" },
+      { label: "Dementia FAQs", to: "/dementia-care/dementia-faqs" },
+      { label: "DementiaWise®", to: "/programs/dementiawise" },
+      { label: "GUIDE Medicare Benefits", to: "/dementia-care/guide-benefit" },
+      { label: "In-Home Care for Alzheimer's", to: "/dementia-care/in-home-care-for-alzheimers" },
+      { label: "In-Home Care for Dementia", to: "/dementia-care/in-home-care-for-dementia" },
+    ],
+  },
+  {
+    label: "Programs",
+    to: "/programs",
+    items: [
+      { label: "Care Kitchen Senior Nutrition", to: "/programs/care-kitchen" },
+      { label: "DementiaWise® Specialized Dementia Care", to: "/programs/dementiawise" },
+      { label: "Gaitway Fall Risk Management", to: "/programs/gaitway-fall-prevention" },
+      { label: "Joyful Memories Music Program", to: "/programs/joyful-memories" },
+      { label: "LGBTQ+", to: "/programs/lgbtq-inclusive-ally" },
+      { label: "Meaningful Activities", to: "/programs/meaningful-activities" },
+      { label: "Parkinson's Pathway", to: "/programs/parkinsons-pathway" },
+      { label: "Reducing Hospital Readmissions", to: "/programs/reducing-hospital-readmissions" },
+    ],
+  },
+  {
+    label: "For Professionals",
+    to: "/for-professionals",
+    items: [
+      { label: "Free CEUs", to: "/for-professionals/masterclass-ce-webinars" },
+      { label: "On-Site Independent Living", to: "/for-professionals/on-site-independent-living" },
+      { label: "Podcasts", to: "/resources/podcasts" },
+      { label: "Reducing Hospital Readmission", to: "/for-professionals/reducing-hospital-readmission" },
+    ],
+  },
+];
+
+export const utilityMenus: NavMenu[] = [
+  {
+    label: "About",
+    to: "/about",
+    items: [
+      { label: "Our 30th Anniversary", to: "/about/30th-anniversary" },
+      { label: "Careers", to: "/careers" },
+      { label: "Blog", to: "/blog" },
+      { label: "In the News", to: "/in-the-news" },
+      { label: "Home Health Care vs In-Home Care", to: "/resources/home-health-care-vs-in-home-care" },
+      { label: "Resources", to: "/resources" },
+    ],
+  },
+  {
+    label: "Careers",
+    to: "/careers",
+    items: [
+      { label: "Registered Nurse", to: "/careers/registered-nurse" },
+      { label: "Caregiver Positions", to: "/careers/caregiver-positions" },
+      { label: "Testimonials", to: "/careers/testimonials" },
+    ],
+  },
+];
+
 export const caregiverPerks = [
   "Competitive pay with weekly direct deposit",
   "Health, dental, and vision benefits for eligible employees",
