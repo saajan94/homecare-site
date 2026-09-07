@@ -1,12 +1,12 @@
-# Evergreen Home Care — marketing site
+# Compassionate Care Companions — marketing site
 
 A starter marketing site for an in-home senior care business, built with
 **React 19 + Vite + Tailwind CSS v4 + React Router**.
 
 > This is an original build. It follows the common structure and UX conventions
 > of the home-care industry (Home Instead, Visiting Angels, ComforCare, etc.) but
-> uses original placeholder copy, an original visual identity ("Evergreen Home
-> Care"), and stock imagery. Swap in the client's brand, copy, and photos as they
+> uses original placeholder copy, an original visual identity ("Compassionate
+> Care Companions"), and stock imagery. Swap in the client's brand, copy, and photos as they
 > arrive — the content is centralized to make that easy.
 
 ## Run it

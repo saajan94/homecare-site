@@ -43,17 +43,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative">
+          <div>
             <Img
               src={images.heroCaregiver}
               alt="A caregiver holding an older adult's hands"
               className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl"
               label="Hero photo coming soon"
             />
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-5 shadow-lg sm:block">
-              <p className="font-display text-3xl font-semibold text-brand">15+</p>
-              <p className="text-sm text-ink-soft">years caring for local families</p>
-            </div>
           </div>
         </div>
       </section>

@@ -7,6 +7,12 @@ import About from "./pages/About";
 import Caregivers from "./pages/Caregivers";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
+import TwentyFourHourCare from "./pages/TwentyFourHourCare";
+import DementiaCare from "./pages/DementiaCare";
+import DisabilityManagement from "./pages/DisabilityManagement";
+import LightHousekeeping from "./pages/LightHousekeeping";
+import LongTermCareInsurance from "./pages/LongTermCareInsurance";
+import PatientCenteredCare from "./pages/PatientCenteredCare";
 import StubPage from "./pages/StubPage";
 import NotFound from "./pages/NotFound";
 import { navMenus, utilityMenus } from "./data/site";
@@ -21,6 +27,12 @@ const REAL_PATHS = new Set([
   "/careers",
   "/caregivers",
   "/contact",
+  "/in-home-care/24-hour-care-service",
+  "/dementia-care",
+  "/in-home-care/disability-management",
+  "/in-home-care/light-housekeeping",
+  "/in-home-care/long-term-care-insurance",
+  "/in-home-care/patient-centered-care",
 ]);
 
 const stubPages = [
@@ -44,6 +56,27 @@ export default function App() {
         <Route path="careers" element={<Caregivers />} />
         <Route path="locations" element={<Locations />} />
         <Route path="contact" element={<Contact />} />
+        <Route
+          path="in-home-care/24-hour-care-service"
+          element={<TwentyFourHourCare />}
+        />
+        <Route path="dementia-care" element={<DementiaCare />} />
+        <Route
+          path="in-home-care/disability-management"
+          element={<DisabilityManagement />}
+        />
+        <Route
+          path="in-home-care/light-housekeeping"
+          element={<LightHousekeeping />}
+        />
+        <Route
+          path="in-home-care/long-term-care-insurance"
+          element={<LongTermCareInsurance />}
+        />
+        <Route
+          path="in-home-care/patient-centered-care"
+          element={<PatientCenteredCare />}
+        />
         {stubPages.map((p) => (
           <Route
             key={p.to}

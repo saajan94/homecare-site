@@ -1,12 +1,12 @@
 import { images, type ImageKey } from "../lib/images";
 
 export const company = {
-  name: "Evergreen Home Care",
+  name: "Compassionate Care Companions",
   tagline: "Care that feels like family",
-  phone: "(555) 010-2400",
-  phoneHref: "tel:+15550102400",
-  email: "hello@evergreenhomecare.example",
-  address: "1200 Maple Avenue, Suite 210, Riverton, ST 00000",
+  phone: "(703) 930-9030",
+  phoneHref: "tel:+17039309030",
+  email: "bless3c@gmail.com",
+  address: "Compassionate Care Companions, P.O. Box 15, Waterford, VA 20197",
   hours: "Care available 24 hours a day, 7 days a week",
 };
 
@@ -179,12 +179,12 @@ export const faqs = [
 ];
 
 export const locations = [
-  { city: "Riverton", region: "Central County", phone: "(555) 010-2400" },
-  { city: "Oakmont", region: "Central County", phone: "(555) 010-2411" },
-  { city: "Fairhaven", region: "North County", phone: "(555) 010-2422" },
-  { city: "Lakeside", region: "North County", phone: "(555) 010-2433" },
-  { city: "Cedar Springs", region: "South County", phone: "(555) 010-2444" },
-  { city: "Brookfield", region: "South County", phone: "(555) 010-2455" },
+  { city: "Riverton", region: "Central County", phone: "(703) 930-9030" },
+  { city: "Oakmont", region: "Central County", phone: "(703) 930-9030" },
+  { city: "Fairhaven", region: "North County", phone: "(703) 930-9030" },
+  { city: "Lakeside", region: "North County", phone: "(703) 930-9030" },
+  { city: "Cedar Springs", region: "South County", phone: "(703) 930-9030" },
+  { city: "Brookfield", region: "South County", phone: "(703) 930-9030" },
 ];
 
 export type NavItem = { label: string; to: string };
@@ -257,7 +257,6 @@ export const utilityMenus: NavMenu[] = [
     label: "About",
     to: "/about",
     items: [
-      { label: "Our 30th Anniversary", to: "/about/30th-anniversary" },
       { label: "Careers", to: "/careers" },
       { label: "Blog", to: "/blog" },
       { label: "In the News", to: "/in-the-news" },
