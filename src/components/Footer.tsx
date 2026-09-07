@@ -57,7 +57,13 @@ export default function Footer() {
                 {company.email}
               </a>
             </li>
-            <li>{company.address}</li>
+            <li>
+              {company.address.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </li>
             <li className="text-white/60">{company.hours}</li>
           </ul>
         </div>

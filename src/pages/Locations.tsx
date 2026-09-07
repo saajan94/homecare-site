@@ -47,7 +47,12 @@ export default function Locations() {
               </div>
             ))}
             <p className="text-sm text-ink-soft">
-              Main office: {company.address}
+              Main office:
+              {company.address.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </p>
           </div>
         </div>

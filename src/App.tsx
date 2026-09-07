@@ -13,6 +13,15 @@ import DisabilityManagement from "./pages/DisabilityManagement";
 import LightHousekeeping from "./pages/LightHousekeeping";
 import LongTermCareInsurance from "./pages/LongTermCareInsurance";
 import PatientCenteredCare from "./pages/PatientCenteredCare";
+import PersonalInHomeCare from "./pages/PersonalInHomeCare";
+import RespiteShortTermCare from "./pages/RespiteShortTermCare";
+import RecentHospitalization from "./pages/RecentHospitalization";
+import SeniorCareManagement from "./pages/SeniorCareManagement";
+import AlzheimersDementiaCare from "./pages/AlzheimersDementiaCare";
+import ReducingHospitalReadmissions from "./pages/ReducingHospitalReadmissions";
+import CaregiverPositions from "./pages/CaregiverPositions";
+import Apply from "./pages/Apply";
+import HomeHealthVsInHomeCare from "./pages/HomeHealthVsInHomeCare";
 import StubPage from "./pages/StubPage";
 import NotFound from "./pages/NotFound";
 import { navMenus, utilityMenus } from "./data/site";
@@ -33,6 +42,15 @@ const REAL_PATHS = new Set([
   "/in-home-care/light-housekeeping",
   "/in-home-care/long-term-care-insurance",
   "/in-home-care/patient-centered-care",
+  "/in-home-care/personal-in-home-care",
+  "/in-home-care/respite-and-short-term-care",
+  "/in-home-care/transitions-of-care",
+  "/in-home-care/senior-and-elder-care-management",
+  "/dementia-care/in-home-care-for-alzheimers",
+  "/for-professionals/reducing-hospital-readmission",
+  "/careers/caregiver-positions",
+  "/careers/apply",
+  "/resources/home-health-care-vs-in-home-care",
 ]);
 
 const stubPages = [
@@ -76,6 +94,39 @@ export default function App() {
         <Route
           path="in-home-care/patient-centered-care"
           element={<PatientCenteredCare />}
+        />
+        <Route
+          path="in-home-care/personal-in-home-care"
+          element={<PersonalInHomeCare />}
+        />
+        <Route
+          path="in-home-care/respite-and-short-term-care"
+          element={<RespiteShortTermCare />}
+        />
+        <Route
+          path="in-home-care/transitions-of-care"
+          element={<RecentHospitalization />}
+        />
+        <Route
+          path="in-home-care/senior-and-elder-care-management"
+          element={<SeniorCareManagement />}
+        />
+        <Route
+          path="dementia-care/in-home-care-for-alzheimers"
+          element={<AlzheimersDementiaCare />}
+        />
+        <Route
+          path="for-professionals/reducing-hospital-readmission"
+          element={<ReducingHospitalReadmissions />}
+        />
+        <Route
+          path="careers/caregiver-positions"
+          element={<CaregiverPositions />}
+        />
+        <Route path="careers/apply" element={<Apply />} />
+        <Route
+          path="resources/home-health-care-vs-in-home-care"
+          element={<HomeHealthVsInHomeCare />}
         />
         {stubPages.map((p) => (
           <Route

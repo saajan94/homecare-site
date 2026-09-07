@@ -1,12 +1,10 @@
-import { useState } from "react";
 import Img from "../components/Img";
 import PageHeader from "../components/PageHeader";
+import ApplicationForm from "../components/ApplicationForm";
 import { ButtonLink, Section, SectionHeading } from "../components/ui";
 import { caregiverPerks, images } from "../data/site";
 
 export default function Caregivers() {
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <>
       <PageHeader
@@ -14,7 +12,7 @@ export default function Caregivers() {
         title="Do work that matters, close to home"
         intro="If you are patient, dependable, and genuinely enjoy the company of older adults, we would love to meet you. No two days look the same, and the relationships last."
       >
-        <ButtonLink to="#apply">Apply now</ButtonLink>
+        <ButtonLink to="/careers/apply">Apply now</ButtonLink>
       </PageHeader>
 
       <Section>
@@ -56,71 +54,9 @@ export default function Caregivers() {
       <Section id="apply">
         <div className="mx-auto max-w-2xl">
           <SectionHeading eyebrow="Apply" title="Start your application" align="center" />
-          {submitted ? (
-            <p className="mt-8 rounded-2xl bg-brand-light p-6 text-center text-brand-dark">
-              Thanks for your interest. This is a demo form — connect it to your
-              applicant tracking system or email service to receive submissions.
-            </p>
-          ) : (
-            <form
-              className="mt-8 grid gap-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
-            >
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="First name" name="firstName" required />
-                <Field label="Last name" name="lastName" required />
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="Email" name="email" type="email" required />
-                <Field label="Phone" name="phone" type="tel" required />
-              </div>
-              <Field label="City you live in" name="city" required />
-              <label className="text-sm font-medium text-ink">
-                Tell us about your caregiving experience
-                <textarea
-                  name="experience"
-                  rows={4}
-                  className="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand"
-                />
-              </label>
-              <button
-                type="submit"
-                className="mt-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-brand-dark"
-              >
-                Submit application
-              </button>
-            </form>
-          )}
+          <ApplicationForm />
         </div>
       </Section>
     </>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <label className="text-sm font-medium text-ink">
-      {label}
-      {required && <span className="text-accent"> *</span>}
-      <input
-        type={type}
-        name={name}
-        required={required}
-        className="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand"
-      />
-    </label>
   );
 }

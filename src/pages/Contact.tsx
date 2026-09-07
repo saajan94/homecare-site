@@ -27,7 +27,13 @@ export default function Contact() {
                 {company.email}
               </a>
             </ContactRow>
-            <ContactRow label="Office">{company.address}</ContactRow>
+            <ContactRow label="Office">
+              {company.address.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </ContactRow>
             <ContactRow label="Availability">{company.hours}</ContactRow>
           </div>
 

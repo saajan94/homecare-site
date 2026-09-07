@@ -11,7 +11,51 @@ export default function About() {
         eyebrow="About us"
         title="Local, family-minded, and here for the long run"
         intro={`${company.name} was started by people who had cared for their own parents and knew how hard it is to find help you can trust. We built the kind of agency we wished we had called.`}
-      />
+      >
+        <div className="space-y-10">
+          <div>
+            <h2 className="font-display text-2xl font-semibold text-ink">
+              Our Mission
+            </h2>
+            <p className="mt-3 text-ink-soft">
+              At {company.name}, our mission is to provide dependable,
+              personalized, and heartfelt care that helps seniors and adults
+              remain safe, comfortable, and independent in their own homes. We
+              treat every client with kindness, dignity, and respect while giving
+              families confidence that their loved one is in caring hands.
+            </p>
+          </div>
+          <div>
+            <h2 className="font-display text-2xl font-semibold text-ink">
+              Our Vision
+            </h2>
+            <p className="mt-3 text-ink-soft">
+              Our vision is to become a trusted in-home care provider throughout
+              Maryland and Virginia, known for compassionate service, highly
+              trained caregivers, and meaningful relationships. We want every
+              client to feel valued, supported, and connected while receiving
+              care that improves their quality of life.
+            </p>
+          </div>
+          <div>
+            <h2 className="font-display text-2xl font-semibold text-ink">
+              Our Goals
+            </h2>
+            <p className="mt-3 text-ink-soft">
+              Our goals are to provide care that reflects each client's
+              individual needs, preferences, culture, and daily routine. We
+              strive to hire caring and dependable professionals, provide ongoing
+              education—including dementia care training through the Alzheimer's
+              Association—and maintain open communication with families.
+            </p>
+            <p className="mt-4 text-ink-soft">
+              We are committed to supporting independence, protecting dignity,
+              improving safety, and bringing comfort and companionship into every
+              home we serve.
+            </p>
+          </div>
+        </div>
+      </PageHeader>
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
