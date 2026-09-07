@@ -27,6 +27,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-black/5 bg-white/95 backdrop-blur">
+      {/* Under-construction disclaimer */}
+      <div className="bg-accent px-4 py-2 text-center text-xs font-semibold text-white sm:text-sm">
+        🚧 This site is currently under construction — some pages and information
+        may be incomplete.
+      </div>
+
       {/* Utility bar — company-level links, comforcare.com style */}
       <div className="hidden bg-brand text-white lg:block">
         <div className="container-page flex h-10 items-center justify-end gap-6">
