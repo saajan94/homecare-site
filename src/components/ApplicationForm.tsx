@@ -10,8 +10,8 @@ export default function ApplicationForm() {
   if (!formsubmitAction) {
     return (
       <p className="mt-8 rounded-2xl bg-brand-light p-6 text-center text-brand-dark">
-        Our online application isn't connected yet. Please email your details and
-        résumé to{" "}
+        Our online application isn't connected yet. Please email your details
+        and résumé to{" "}
         <a className="font-semibold underline" href={`mailto:${company.email}`}>
           {company.email}
         </a>
@@ -67,7 +67,7 @@ export default function ApplicationForm() {
         />
       </label>
       <label className="text-sm font-medium text-ink">
-        Résumé{" "}
+        Resume{" "}
         <span className="font-normal text-ink-soft">
           (PDF or Word, up to 10&nbsp;MB — optional)
         </span>
