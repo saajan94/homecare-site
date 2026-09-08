@@ -1,10 +1,13 @@
-import { useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
+import { useSearchParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import { Section } from "../components/ui";
 import { company } from "../data/site";
+import { formsubmitAction, thankYouUrl } from "../lib/formSubmit";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [params] = useSearchParams();
+  const sent = params.get("sent") === "1";
 
   return (
     <>
@@ -38,22 +41,62 @@ export default function Contact() {
           </div>
 
           <div className="rounded-3xl border border-black/5 bg-cream p-6 sm:p-8">
-            {submitted ? (
+            {sent ? (
               <div className="rounded-2xl bg-white p-6 text-center">
                 <h2 className="font-display text-xl font-semibold">Thank you</h2>
                 <p className="mt-2 text-sm text-ink-soft">
-                  This is a demo form. Wire it up to your CRM, email service, or a
-                  form backend to start receiving inquiries.
+                  We've received your request and a care coordinator will call
+                  you back, usually the same day.
+                </p>
+              </div>
+            ) : !formsubmitAction ? (
+              <div className="rounded-2xl bg-white p-6 text-center">
+                <h2 className="font-display text-xl font-semibold">
+                  Reach us directly
+                </h2>
+                <p className="mt-2 text-sm text-ink-soft">
+                  Our contact form isn't connected yet. Please call{" "}
+                  <a className="font-semibold text-brand" href={company.phoneHref}>
+                    {company.phone}
+                  </a>{" "}
+                  or email{" "}
+                  <a
+                    className="font-semibold text-brand"
+                    href={`mailto:${company.email}`}
+                  >
+                    {company.email}
+                  </a>
+                  .
                 </p>
               </div>
             ) : (
               <form
                 className="grid gap-4"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitted(true);
-                }}
+                action={formsubmitAction}
+                method="POST"
+                encType="multipart/form-data"
               >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New callback request — Compassionate Care Companions"
+                />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value={thankYouUrl("/contact?sent=1")}
+                />
+                {/* Honeypot — hidden from people, catches bots */}
+                <input
+                  type="text"
+                  name="_honey"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  className="hidden"
+                  aria-hidden="true"
+                />
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Field label="Your name" name="name" required />
                   <Field label="Phone" name="phone" type="tel" required />

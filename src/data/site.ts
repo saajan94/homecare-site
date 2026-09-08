@@ -128,32 +128,6 @@ export const steps = [
   },
 ];
 
-export type Testimonial = {
-  quote: string;
-  name: string;
-  relation: string;
-};
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Our caregiver has become part of the family. Mom looks forward to her visits, and for the first time in years I am not lying awake worrying.",
-    name: "Denise R.",
-    relation: "Daughter of a client",
-  },
-  {
-    quote:
-      "After Dad's surgery we needed help fast. The team had someone with us the next morning and handled everything with real professionalism.",
-    name: "Marcus T.",
-    relation: "Son of a client",
-  },
-  {
-    quote:
-      "They took the time to understand my husband's dementia and what calms him. The difference in his days has been remarkable.",
-    name: "Eleanor P.",
-    relation: "Spouse of a client",
-  },
-];
 
 export const faqs = [
   {

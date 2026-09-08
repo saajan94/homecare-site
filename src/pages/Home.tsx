@@ -2,14 +2,7 @@ import { Link } from "react-router-dom";
 import Img from "../components/Img";
 import CtaBand from "../components/CtaBand";
 import { ButtonLink, Eyebrow, Section, SectionHeading } from "../components/ui";
-import {
-  company,
-  images,
-  services,
-  steps,
-  testimonials,
-  values,
-} from "../data/site";
+import { company, images, services, steps, values } from "../data/site";
 
 export default function Home() {
   return (
@@ -148,33 +141,6 @@ export default function Home() {
             </li>
           ))}
         </ol>
-      </Section>
-
-      {/* Testimonials */}
-      <Section className="bg-brand-light">
-        <SectionHeading
-          eyebrow="From the families we serve"
-          title="Care you can feel good about"
-          align="center"
-        />
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure
-              key={t.name}
-              className="flex flex-col rounded-2xl bg-white p-6 shadow-sm"
-            >
-              <blockquote className="flex-1 text-sm leading-relaxed text-ink-soft">
-                “{t.quote}”
-              </blockquote>
-              <figcaption className="mt-4 text-sm font-semibold text-ink">
-                {t.name}
-                <span className="block font-normal text-ink-soft">
-                  {t.relation}
-                </span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
       </Section>
 
       <CtaBand />

@@ -21,7 +21,6 @@ export const images = {
   caregiverPortrait: u("1607990281513-2c110a25bd8c"),
   locationsMap: u("1524661135-423995f22d0b"),
   ctaFamily: u("1454875392665-2ccf606b0c9e"),
-  testimonialBg: u("1519085360753-af0119f7cbe7"),
 } as const;
 
 export type ImageKey = keyof typeof images;
